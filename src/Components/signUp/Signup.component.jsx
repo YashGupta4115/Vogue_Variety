@@ -22,7 +22,7 @@ const SignUpForm = ()=> {
     const handleSubmit = async (event)=>{
         event.preventDefault();
 
-        if(password != confirmPassword){
+        if(password !== confirmPassword){
             alert("passswords do not match") ;
             return;
         }
@@ -32,9 +32,9 @@ const SignUpForm = ()=> {
             await createUserDocumentFromAuth(user, {displayName});
             resetFormFields();
         }catch(error){
-            if(error.code == 'auth/email-already-in-use')
+            if(error.code === 'auth/email-already-in-use')
             alert(error.code);
-            else if (error.code == 'auth/weak-password')
+            else if (error.code === 'auth/weak-password')
             alert(error.code);
 
             console.log(error);
@@ -48,7 +48,7 @@ const SignUpForm = ()=> {
 
     return (
         <div className="sign-up-container">
-            <h1>Don't have an account ? Sign Up!</h1>
+            <h2>Don't have an account ? Sign Up!</h2>
             <span>Sign up with Email and Password</span>
             <form onSubmit={handleSubmit}>
                 <FormInput label='DisplayName' type="text" required onChange={handleChange} name='displayName' value={displayName}/>
