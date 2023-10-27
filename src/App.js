@@ -3,15 +3,7 @@ import Navigation from './routes/Navigation/navigation.component';
 import Home from './routes/home/home.component';
 
 import { Routes , Route } from 'react-router-dom';
-
-
-const Shop = ()=> { 
-  return (
-    <div>
-      <h1>YOU ARE AT SHOP</h1>
-    </div>
-  )
-}
+import Shop from './routes/shop/shop.component';
 
 const App = () => {
   return (
