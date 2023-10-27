@@ -1,11 +1,15 @@
 
-import { Fragment } from "react";
+import { Fragment,useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
 import '../Navigation/navigation.styles.scss';
 import { ReactComponent as VogueLogo } from '../../assets/crown.svg';
+import { UserContext } from "../../Components/contexts/user.context";
 
 const Navigation = ()=> {
 
+    const { currentUser } = useContext(UserContext);
+    console.log(currentUser);
+    
     return( 
         <div>
             <Fragment>
