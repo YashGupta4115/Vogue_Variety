@@ -2,7 +2,7 @@
 import { Fragment,useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
 import '../Navigation/navigation.styles.scss';
-import { ReactComponent as VogueLogo } from '../../assets/crown.svg';
+import { ReactComponent as VogueLogo } from '../../assets/vogue-variety-high-resolution-logo-transparent.svg';
 import { UserContext } from "../../Components/contexts/user.context";
 import { signOutUser } from "../utils/firebase/firebase.utils";
 import CartIcon from "../../Components/cart-icon/cart-icon.component";
